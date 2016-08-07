@@ -16,4 +16,4 @@ A commit is a save point in Git that you can refer back to in the future, if nee
 
 * What is a merge conflict?
 
-When two people, working on the same file, make different changes to the same line of code and try to merge their branches into the master branch, Git will not know which one is correct. 
+A merge conflict is when individuals working on the same file make different changes to the same line of code and try to merge their branches into the master branch, Git will not know which one is correct. 
