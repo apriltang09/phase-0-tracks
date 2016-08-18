@@ -40,11 +40,13 @@ main {
     font-size: 10px;
   }
 
-  ul{
+  ul {
     font-size: 10px;
   }
+}
 
-  img{
+@media screen and (min-width: 600px){
+  img {
     border: 3px solid blue;
   }
 }
