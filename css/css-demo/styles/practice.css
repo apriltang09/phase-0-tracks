@@ -1,0 +1,26 @@
+#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: .5em;
+	margin-top: .5em;
+	padding: .5em;
+}
+
+.accomplishments {
+	font-size: .8em;
+}
+
+li:last-child {
+	color: firebrick;
+}
+
+li:hover {
+	color: blueviolet;
+}
+
+ul > li {
+	font-size: 1.2em;
+}
