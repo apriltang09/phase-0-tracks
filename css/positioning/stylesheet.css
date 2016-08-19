@@ -1,0 +1,19 @@
+#octopus {
+	margin: auto;
+	display: block;
+}
+
+#hat {
+	position: relative;
+	margin-left: 350px;
+	top: 90px;
+}
+
+/*relative positioning moves the specific selector only, 
+does not move anything else*/
+
+#glasses {
+	position: relative;
+	left: 550px;
+	top: 160px;
+}
