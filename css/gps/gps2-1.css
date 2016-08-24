@@ -1,0 +1,45 @@
+header {
+  background-color: black;
+  color: white;
+  font-family: arial;
+}
+
+header:hover {
+  color: green;
+}
+
+header p {
+  color: hotpink;
+  font-style: italic;
+}
+
+.column-1 {
+  background-color: yellow;
+  color: red;
+  display: inline-block;
+  width: 49%;
+  background-image: url(https://www.dev-metal.com/wp-content/uploads/2014/01/github-logo-octocat-1-704x605.jpg);
+  background-size: 100%;
+}
+
+.column-2 {
+  background-color: lightgreen;
+  display: inline-block;
+  font-family: cursive;
+  width: 49%;
+  vertical-align: top;
+  border-radius: 25px 10px;
+}
+
+footer {
+  background-color: lightblue;
+}
+
+header, footer {
+  background-color: yellow;
+}
+@media screen and (max-width: 500px){
+  header h1 {
+    font-size: 100px;
+  }
+}
