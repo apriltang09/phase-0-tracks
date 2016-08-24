@@ -1,0 +1,39 @@
+Release 0: Equip Your New Robot
+
+Write the algorithm for using an elevator.
+
+- Ask your master what floor you should go to.
+- Store response in memory.
+- Walk to end of hallway.
+- Look to the right of the elevator to locate current floor number.
+- If current floor number is less than the floor number you want to go to:
+	- Press the down arrow.
+- Otherwise: 
+	- Press the up arrow.
+- Wait for door to open.
+- Step inside elevator.
+- Turn forwards facing the closing elevator doors.
+- Press on the button with the floor number that your master gave you.
+- When door opens on the floor number, step outside.
+	
+Release 1: Find a Real-Life Algorithm
+
+How to Make Coffee
+
+- Turn on faucet.
+- Put large cup under faucet.
+- Wait until there is two cups of water.
+- Turn off faucet.
+- Open the lid of the coffee maker.
+- Pour the cups of water into coffee maker.
+- Open cabinet.
+- Take out one coffee filter.
+- Put coffee filter on table.
+- Open the lid of the container that has coffee grounds. 
+- If you want richer coffee:
+	- Pour five tablespoons of coffee grounds into coffee filter.
+- Otherwise:
+ 	- Scoop four tablespoons of coffee grounds into coffee filter.
+- Place coffee filter in the plastic holder of the coffee maker.
+- Close coffee lid.
+- Press the ‘Brew Now’ button.
