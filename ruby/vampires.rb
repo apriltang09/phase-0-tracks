@@ -6,7 +6,7 @@ while processed > 0
 	puts "What is your name?"
 	name = gets.chomp
 
-	puts "How old are you??"
+	puts "How old are you?"
 	age = gets.to_i
 
 	puts "What year were you born?"
@@ -43,23 +43,20 @@ while processed > 0
 
 processed = processed - 1
 
-puts "Do you have any allergies? (yes/no)"
-allergies = gets.chomp
-	if allergies == "yes"
-		puts "How many allergies do you have?"
-		howmany = gets.to_i
-			until howmany == 0
-				puts "Please name one allergy"
-				allergy = gets.chomp
-					if allergy == "sunshine" #this doesn't work yet 
-						puts "Probably a vampire."
-					end
-			howmany -= 1
+puts "Please complete allergy info and type done when finished with survey. (Type 'ok' to start)."
+user_input = gets.chomp
+
+	while user_input != "sunshine" && user_input != "done"
+		puts "Name one allergy: "
+		user_input = gets.chomp
+			if user_input == "sunshine"
+				puts "Probably a vampire."
 			end
-		puts "done"
-	else
-		puts "I don't have any allergies."
 	end
+
+if user_input == "done"
+	puts "Thank you."
+end
 
 end
 
