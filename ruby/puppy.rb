@@ -10,3 +10,4 @@
 #BEHAVIOR (methods)
 #	Bark
 #	Swim
+#   Jump
