@@ -14,11 +14,11 @@
 
 #Class - a container that holds characteristics (attributes) and behavior (methods).
 
-class Cat
+class Dog
 	def sound(string)
 		puts string
 	end
 end
 
-betsie = Cat.new
-betsie.sound("meow!")
+max = Dog.new
+max.sound("woof! woof!")
