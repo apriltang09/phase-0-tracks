@@ -12,7 +12,13 @@ class TodoList
 		@get_items << item
 	end
 
-	
+	def delete_item(item)
+		@get_items.delete(item)
+	end
+
+	def get_item(num)
+		@get_items.fetch(num)
+	end
 
 end
 
