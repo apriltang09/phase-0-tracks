@@ -1,7 +1,6 @@
 class TodoList
 	def initialize(get_items)
 		@get_items = get_items
-
 	end
 
 	def get_items
@@ -19,6 +18,5 @@ class TodoList
 	def get_item(num)
 		@get_items.fetch(num)
 	end
-
 end
 
