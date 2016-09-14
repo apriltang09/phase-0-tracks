@@ -1,7 +1,8 @@
+
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Jason @jpperlm].
+# We spent [1] hour on this challenge.
 
 # EXPLANATION OF require_relative
 #
@@ -96,6 +97,21 @@ end
 # alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 # alaska.virus_effects
 
-
 #=======================================================================
 # Reflection Section
+
+#There are two different way to write hashes, one with => and another with : 
+#They both do the same thing.
+
+#require_relative means that we are taking code from that file and putting 
+#them into this file. require means that the file does not need to be in the
+#same folder and we have to put down the path of the other file.
+
+#.each and .each key
+
+#the parameters all had instance variables which meant that they were not needed
+#because the other methods already can see it
+
+#instance variables can be seen by all methods
+
+
