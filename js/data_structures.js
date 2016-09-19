@@ -35,4 +35,3 @@ usedCar.honk();
 var newCar = new Car("white", false, 2016);
 console.log(newCar);
 newCar.honk();
-
