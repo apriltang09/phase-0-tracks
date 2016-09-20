@@ -60,6 +60,7 @@ match({name: "Ellie", age: 54}, {name: "Tamir", age: 54})
 // push word into empty array
 // print array to see array results
 
+// Release 2: Part 2
 function algos(array){	
 	var longest = 0
 	for (var i = 0; i < array.length; i++){	
@@ -71,6 +72,7 @@ function algos(array){
 console.log(word)	
 }
 
+// Release 2: Part 1
 function randomWord(num){
 	var array = []
 	for (var n = 0; n < num; n++){
