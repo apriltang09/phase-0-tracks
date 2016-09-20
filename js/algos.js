@@ -24,3 +24,16 @@ algos(["long phrase","longest phrase","longer phrase"])
 // if it is equal, return true
 // compare value to see if it is the same
 // loop through to compare first object with second object key
+
+	var one = object1
+	var two = object2
+	
+	for(var key in one){
+		var first_keys = key
+		var first_values = one[key]
+	}
+	
+	for(key in two){
+		var second_keys = key
+		var second_values = two[key]
+	}
