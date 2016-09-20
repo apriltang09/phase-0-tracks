@@ -60,3 +60,33 @@ match({name: "Ellie", age: 54}, {name: "Tamir", age: 54})
 // push word into empty array
 // print array to see array results
 
+function algos(array){	
+	var longest = 0
+	for (var i = 0; i < array.length; i++){	
+		if(array[i].length > longest){
+			longest = array[i].length
+			var word = array[i]
+		}
+	}	
+console.log(word)	
+}
+
+function randomWord(num){
+	var array = []
+	for (var n = 0; n < num; n++){
+		var word = ""
+		var letters = 'abcdefghijklmnopqrstuvwxyz';
+		for(var i = 0; i < Math.random()*11; i++){
+			word += letters.charAt(Math.floor(Math.random()*letters.length));
+ }
+array.push(word)
+}
+console.log(array)
+}
+
+for(var j = 0; j < 10; j++){
+	var generate = randomWord(3);
+	console.log(generate);
+	algos(generate);
+}
+
