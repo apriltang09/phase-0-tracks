@@ -25,6 +25,8 @@ algos(["long phrase","longest phrase","longer phrase"])
 // compare value to see if it is the same
 // loop through to compare first object with second object key
 
+function match(object1, object2){
+
 	var one = object1
 	var two = object2
 	
@@ -37,3 +39,12 @@ algos(["long phrase","longest phrase","longer phrase"])
 		var second_keys = key
 		var second_values = two[key]
 	}
+
+	if(first_values == second_values && first_keys == second_keys){
+			return true
+		} else {
+			return false
+		}
+}
+
+match({name: "Ellie", age: 54}, {name: "Tamir", age: 54})
