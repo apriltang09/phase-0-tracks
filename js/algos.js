@@ -48,3 +48,15 @@ function match(object1, object2){
 }
 
 match({name: "Ellie", age: 54}, {name: "Tamir", age: 54})
+
+// Release 2
+// function takes in a number
+// have empty array to push in results
+// number is array length 
+
+//have a string of letters
+// loop through the letters and randomly make words 
+// up to 10 letters and from the entire string of words
+// push word into empty array
+// print array to see array results
+
