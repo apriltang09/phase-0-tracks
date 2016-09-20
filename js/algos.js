@@ -1,3 +1,4 @@
+// Release 0
 // loop through each phase
 // compare the phrase length to the one after it
 // if that phase length is longer, hold that in a variable 
@@ -16,3 +17,10 @@ console.log(word)
 }
 
 algos(["long phrase","longest phrase","longer phrase"])
+
+// Release 1
+// take two parameters
+// compare first object key with second object key
+// if it is equal, return true
+// compare value to see if it is the same
+// loop through to compare first object with second object key
