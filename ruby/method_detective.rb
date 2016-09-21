@@ -10,6 +10,7 @@ p "iNvEsTiGaTiOn".swapcase
 
 # "zom".<???>
 p "zom".insert(2, "o")
+p "zom".insert(1, "o")
 # => “zoom”
 
 # "enhance".<???>
