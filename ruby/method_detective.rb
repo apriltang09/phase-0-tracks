@@ -22,6 +22,7 @@ p "Stop! You’re under arrest!".upcase
 
 # "the usual".<???>
 p "the usual".concat(" suspects")
+p "the usual" << " suspects"
 #=> "the usual suspects"
 
 # " suspects".<???>
