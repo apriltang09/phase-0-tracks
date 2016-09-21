@@ -10,6 +10,7 @@ p "iNvEsTiGaTiOn".swapcase
 
 # "zom".<???>
 p "zom".insert(2, "o")
+p "zom".insert(1, "o")
 # => “zoom”
 
 # "enhance".<???>
@@ -22,6 +23,7 @@ p "Stop! You’re under arrest!".upcase
 
 # "the usual".<???>
 p "the usual".concat(" suspects")
+p "the usual" << " suspects"
 #=> "the usual suspects"
 
 # " suspects".<???>
