@@ -1,22 +1,19 @@
 #Release 0: Implement a Simple Search
-arr = []
-
-def search_array(x, y)
-
 arr = [42, 89, 23, 1]
-	index = 0
-	while index < arr.length
-		if arr[index] == y
-			 return index
-		else
-			 nil
-		end
-		index += 1
-	end
+
+def search_array(array, num)
 	
+i = 0
+
+while i < array.length
+	if array[i] == num
+		return i
+	end
+i += 1
+end	
 end
 
-search_array(arr, 24)
+search_array(arr, 1)
 
 #Release 1: Calculate Fibonacci Numbers
 def fib(number)
