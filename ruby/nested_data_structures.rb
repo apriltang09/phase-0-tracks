@@ -1,38 +1,48 @@
 classroom_desks = [
-	{'first' => ['pens', 'pencil', 'sharpie']},
-	{'second' => {'stickers' => ['yellow star', 'red heart']}},
-	{'third' => [
+
+	{first: [
+		'pens', 
+		'pencil', 
+		'sharpie'
+		]
+	},
+	{second: {
+		stickers: [
+			'yellow star', 
+			'red heart']
+			}
+	},
+	{third: [
 		['construction paper', 'cardboard'], 
 		['index cards', 'copy paper'], 
 		['wide ruled', 'college ruled', 'blank paper']
 	]},
-	{'fourth' => 'glitter'}
+	{fourth:'glitter'}
+
 ]
 
-#print a few individual pieces of nested data
-#show how to use multiple indexes or hash keys to access nested items
-#try to show different types of access 
+#change value of array
+classroom_desks[0][:first][0] = "paperclips"
 
-#access third index of classroom_desks
-#classroom_desks[3]
-#=> {"fourth"=>"glitter"}
+#access nested array
+classroom_desks[1][:second][:stickers]
 
-#add an item in stickers hash
-#classroom_desks[1]['second']['stickers'].push('purple diamond')
-#=> ["yellow star", "red heart", "purple diamond"]
+#change string to upcase
+classroom_desks[1][:second][:stickers][1].upcase!
 
-#change index 
-#classroom_desks[2]['third'][0] = ['two-hole punched', 'stapled paper']
-#=> ["two-hole punched", "stapled paper"]
+#add item to end of array
+classroom_desks[2][:third][2].push('colored paper')
 
-#b/c of the reassignment, the index is changed (in place!)
-#classroom_desks
-#=> [{"first"=>["pens", "pencil", "sharpie"]}, {"second"=>{"stickers"=>["yellow star", "red heart"]}}, {"third"=>[["two-hole punched", "stapled paper"], ["index cards", "copy paper"], ["wide ruled", "college ruled", "blank paper"]]}, {"fourth"=>"glitter"}]
+#change value of hash
+classroom_desks[3][:fourth] = "gold"
 
-#access index with hash and index
-#classroom_desks[0]['first'][1] 
-#=> "pencil"
+p classroom_desks
 
-#access index with hash and another hash and another index
-#classroom_desks[1]['second']['stickers'][1]
-#=> "red heart"
+# [{:first=>["paperclips", "pencil", "sharpie"]}, 
+# {:second=>{:stickers=>["yellow star", "RED HEART"]}}, 
+# {:third=>[["construction paper", "cardboard"], 
+# 	["index cards", "copy paper"], 
+# 	["wide ruled", "college ruled", "blank paper", "colored paper"]]}, 
+# {:fourth=>"gold"}]
+
+
