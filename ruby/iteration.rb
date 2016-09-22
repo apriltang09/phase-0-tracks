@@ -59,6 +59,7 @@ p dogs
 #.EACH doesn't change the original hash
 #.MAP! can't be used on hashes
 #.MAP will not change the original hash
+#if .MAP is stored in a variable, it DOESN'T WORK will only change the keys with the update
 
 cats = {
 	"bobbie" => "brown",
@@ -104,7 +105,7 @@ p cats
 # Original cat hash: 
 # {"bobbie"=>"brown", "angelica"=>"white", "tabitha"=>"spotted", "samantha"=>"red"}
 
-cats.map do |cat, color|
+update = cats.map do |cat, color|
 	cat.upcase
 end
 
@@ -114,5 +115,6 @@ p update
 # After .map used on hash:
 # {"bobbie"=>"brown", "angelica"=>"white", "tabitha"=>"spotted", "samantha"=>"red"}
 # ["BOBBIE", "ANGELICA", "TABITHA", "SAMANTHA"]
+
 
 
