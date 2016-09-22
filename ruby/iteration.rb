@@ -150,18 +150,23 @@ p numbers
 # => [-2, -1, 0, 1, 2]
 
 #HASH
-zoo = {
-	'sealions' => 'fishes',
-	'giraffes' => 'grass',
-	'rabbits' => 'carrots',
-	'panda' => 'bamboo'
+numbers = {
+	one: 1,
+	two: 2,
+	three: 3, 
+	four: 4, 
+	five: 5,
+	six: 6,
+	seven: 7, 
+	eight: 8,
+	nine: 9
 }
 
-zoo.delete('rabbits')
-# => "carrots"
-p zoo
-# {"sealions"=>"fishes", "giraffes"=>"grass", "panda"=>"bamboo"}
-# => {"sealions"=>"fishes", "giraffes"=>"grass", "panda"=>"bamboo"}
+p numbers.delete_if {|word, digit| digit > 5}
+# {:one=>1, :two=>2, :three=>3, :four=>4, :five=>5}
+p numbers
+# {:one=>1, :two=>2, :three=>3, :four=>4, :five=>5}
+# => {:one=>1, :two=>2, :three=>3, :four=>4, :five=>5}
 
 #3. A different method that filters a data structure for only items satisfying a certain condition
 #ARRAY
