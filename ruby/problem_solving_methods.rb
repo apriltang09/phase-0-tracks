@@ -28,7 +28,6 @@ def search_array(array, num)
 	end
 
 return nil
-
 end
 
 search_array(arr, 1)
@@ -45,8 +44,7 @@ arr = [0, 1]
 		i += 1
 	end
 	
-arr
-	
+arr	
 end
 
 fib(100)
