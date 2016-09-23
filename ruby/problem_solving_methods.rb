@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #Release 0: Implement a Simple Search
 arr = [42, 89, 23, 1]
 
@@ -102,4 +100,3 @@ end
 
 bubble_sort([5, 2, 1, 235, 23])
 #=> [1, 2, 5, 23, 235]
->>>>>>> 5.3
