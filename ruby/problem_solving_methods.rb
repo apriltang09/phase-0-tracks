@@ -26,7 +26,9 @@ def search_array(array, num)
 			return array.index(n)
 		end
 	end
+
 return nil
+
 end
 
 search_array(arr, 1)
@@ -38,8 +40,7 @@ arr = [0, 1]
 
 	i = 0
 	
-	while i < number - 2
-		
+	while i < number - 2		
 		arr.push(arr[i] + arr[i+1])
 		i += 1
 	end
