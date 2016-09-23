@@ -1,22 +1,37 @@
 #Release 0: Implement a Simple Search
-arr = []
-
-def search_array(x, y)
-
 arr = [42, 89, 23, 1]
-	index = 0
-	while index < arr.length
-		if arr[index] == y
-			 return index
-		else
-			 nil
-		end
-		index += 1
-	end
+
+def search_array(array, num)
 	
+i = 0
+
+while i < array.length
+	if array[i] == num
+		return i
+	end
+i += 1
+end	
 end
 
-search_array(arr, 24)
+search_array(arr, 1)
+
+#Using .each method
+
+arr = [42, 89, 23, 1]
+
+def search_array(array, num)
+
+	array.each do |n|
+		if n == num
+			return array.index(n)
+		end
+	end
+
+return nil
+
+end
+
+search_array(arr, 1)
 
 #Release 1: Calculate Fibonacci Numbers
 def fib(number)
@@ -25,8 +40,7 @@ arr = [0, 1]
 
 	i = 0
 	
-	while i < number - 2
-		
+	while i < number - 2		
 		arr.push(arr[i] + arr[i+1])
 		i += 1
 	end
@@ -88,5 +102,3 @@ end
 
 bubble_sort([5, 2, 1, 235, 23])
 #=> [1, 2, 5, 23, 235]
-
-#Collaborated with Shana Hagood 
