@@ -15,6 +15,22 @@ end
 
 search_array(arr, 1)
 
+#Using .each method
+
+arr = [42, 89, 23, 1]
+
+def search_array(array, num)
+
+	array.each do |n|
+		if n == num
+			return array.index(n)
+		end
+	end
+return nil
+end
+
+search_array(arr, 1)
+
 #Release 1: Calculate Fibonacci Numbers
 def fib(number)
 
