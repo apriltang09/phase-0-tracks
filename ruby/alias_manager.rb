@@ -14,8 +14,6 @@ def swap(name)
 	name = name.downcase.split(' ').reverse
 	name = name.join(' ').split('')
 	
-	p name
-	
   	vowels = ["a", "e", "i", "o", "u"]
   	consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 	
@@ -33,13 +31,17 @@ def swap(name)
 		end
 	end
 	
-	name = name.join('').split
-	first_name = name[0].capitalize
-	last_name = name[1].capitalize
+	p name = name.join('').split
 	
-	first_name + ' ' + last_name
+	if name.include? name[0]
+		first_name = name[0].capitalize
+		first_name
+	else
+		first_name = name[0].capitalize
+		last_name = name[1].capitalize
+		first_name + ' ' + last_name
+	end
 end
-
 # swap("Felicia Torres")
 
 input = ""
