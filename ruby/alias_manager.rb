@@ -40,4 +40,21 @@ def swap(name)
 	first_name + ' ' + last_name
 end
 
-swap("Felicia Torres")
+# swap("Felicia Torres")
+
+input = ""
+
+while input != "quit"
+	puts "Do you want a fake name? If not, type 'quit' to exit."
+	input = gets.chomp
+		if input == "yes"
+			puts "What is the real first and last name?"
+			real = gets.chomp
+			final[real] = swap(real)
+		else
+			nil
+		end
+end
+	final.each do |real, fake|
+	puts "#{fake} is the fake name of #{real}."
+end
