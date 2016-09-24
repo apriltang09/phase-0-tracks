@@ -42,7 +42,6 @@ def swap(name)
 		first_name
 	end
 end
-# swap("Felicia Torres")
 
 input = ""
 
