@@ -7,3 +7,37 @@
 #have a consonant array
 #go through each character in name and see if there are any consonants that match the character
 #if there is, reassign character to the consonant plus one over
+
+final = {}
+
+def swap(name)
+	name = name.downcase.split(' ').reverse
+	name = name.join(' ').split('')
+	
+	p name
+	
+  	vowels = ["a", "e", "i", "o", "u"]
+  	consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+	
+	name.map! do |character|
+		if character == "u"
+			character = "a"
+		elsif character == "z"
+			character = "b"
+		elsif vowels.include? (character)
+			character = vowels[vowels.index(character) + 1]
+		elsif consonant.include? (character)
+			character = consonant[consonant.index(character) + 1]
+		else
+			character
+		end
+	end
+	
+	name = name.join('').split
+	first_name = name[0].capitalize
+	last_name = name[1].capitalize
+	
+	first_name + ' ' + last_name
+end
+
+swap("Felicia Torres")
