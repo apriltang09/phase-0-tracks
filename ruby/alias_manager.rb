@@ -31,7 +31,7 @@ def swap(name)
 		end
 	end
 	
-	p name = name.join('').split
+	name = name.join('').split
 	
 	if name.include? name[0] && name[1]
 		first_name = name[0].capitalize
@@ -50,11 +50,9 @@ while input != "quit"
 	puts "Do you want a fake name? If not, type 'quit' to exit."
 	input = gets.chomp
 		if input == "yes"
-			puts "What is the real first and last name?"
+			puts "What is the real name?"
 			real = gets.chomp
 			final[real] = swap(real)
-		else
-			nil
 		end
 end
 	final.each do |real, fake|
