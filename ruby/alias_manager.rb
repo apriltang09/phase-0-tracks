@@ -33,13 +33,13 @@ def swap(name)
 	
 	p name = name.join('').split
 	
-	if name.include? name[0]
-		first_name = name[0].capitalize
-		first_name
-	else
+	if name.include? name[0] && name[1]
 		first_name = name[0].capitalize
 		last_name = name[1].capitalize
 		first_name + ' ' + last_name
+	else
+		first_name = name[0].capitalize
+		first_name
 	end
 end
 # swap("Felicia Torres")
