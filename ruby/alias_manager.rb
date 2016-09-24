@@ -1,43 +1,59 @@
-#Ask the user if they want a fake name, use a loop to keep asking if they want a fake name
-#if yes, ask them what the real name is
-#then split the name into letters and have each letter move to the next letter
-#then join them together to get the fake name
-#exit the loop when the user says 'quit'
-#do a method on the array that prints out the final data in a sentence. 
+#take in a name
+#change in into an array and switch the first and last name
+#have a vowel array
+#go through each character in name and see if there are any vowels
+#that match the character
+#if there is, reassign character to the vowel plus one over
+#have a consonant array
+#go through each character in name and see if there are any consonants that match the character
+#if there is, reassign character to the consonant plus one over
 
+final = {}
 
-input = " "
-final = []
-
-def fake_name(name, final)
-	name = name.split('')
-	name.map! do |letter|
-		if letter == " "
-			letter = ' '
+def swap(name)
+	name = name.downcase.split(' ').reverse
+	name = name.join(' ').split('')
+	
+  	vowels = ["a", "e", "i", "o", "u"]
+  	consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+	
+	name.map! do |character|
+		if character == "u"
+			character = "a"
+		elsif character == "z"
+			character = "b"
+		elsif vowels.include? (character)
+			character = vowels[vowels.index(character) + 1]
+		elsif consonant.include? (character)
+			character = consonant[consonant.index(character) + 1]
 		else
-			letter.next
+			character
 		end
 	end
-		name = name.join('')
-		final << name
-end
-		
-while input != "quit" 
-	puts "Do you want a fake name? (yes/no)"
-	input = gets.chomp
-
-	if input == "yes"
-		puts "What is the real name?"
-		real = gets.chomp
-		fake_name(real, final)
+	
+	name = name.join('').split
+	
+	if name.include? name[0] && name[1]
+		first_name = name[0].capitalize
+		last_name = name[1].capitalize
+		first_name + ' ' + last_name
 	else
-		puts "Please type 'quit' to exit the program."
-		input = gets.chomp
-		final
-		
-		final.each do |name|
-			puts "#{name} is a fake name."
+		first_name = name[0].capitalize
+		first_name
 	end
-break	
-	end
+end
+
+input = ""
+
+while input != "quit"
+	puts "Do you want a fake name? If not, type 'quit' to exit."
+	input = gets.chomp
+		if input == "yes"
+			puts "What is the real name?"
+			real = gets.chomp
+			final[real] = swap(real)
+		end
+end
+	final.each do |real, fake|
+	puts "#{fake} is the fake name of #{real}."
 end
