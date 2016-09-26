@@ -1,76 +1,48 @@
 class Puppy
-	
-	def fetch(toy)
-		puts "I brought back the #{toy}!"
-		toy
-	end
-	
-	def speak(integer)
-		integer.times do
-			puts "Woof!"
-		end
-	end
-	
-	def roll_over
-		puts "*rolls over*"
-	end
-	
-	def dog_years(num)
-		final = num + 7
-		final
-	end
-	
-	def bark (volume)
-		puts volume.upcase
-	end
-	
+
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
+  def speak(int)
+  	int.times{puts "Woof!"}
+  end
+  def roll_over
+  	puts "*rolls over*"
+  end
+  def dog_years(human_years)
+  	dog_years = human_years*7
+  end
+  def  sit
+  	puts "*dog sits*"
+  end
+  def initialize
+  	puts "Initializing new puppy instance ..."
+  end
+end
+ball = "ball"
+fido = Puppy.new
+fido.fetch(ball)
+fido.speak(2)
+fido.roll_over
+puts fido.dog_years(10)
+fido.sit
+
+class Kitty
 	def initialize
-		puts "Initializing new puppy instance..."
+		puts "Initializing new kitty..."
+	end
+	def meow(int)
+		int.times{puts "MEOW!"}
+	end
+	def scratch
+		puts "You have been scratched"
 	end
 end
-
-roxie = Puppy.new
-
-#DRIVER CODE
-roxie.fetch("ball")
-roxie.speak(3)
-roxie.roll_over
-roxie.dog_years(2)
-roxie.bark("i am being very quiet (not!)")
-
-class Kitten
-	
-	def initialize
-		puts "Meow!"
-	end
-	
-	def play(string)
-		puts "I like to play with #{string}."
-	end
-
-	def catch (num)
-		fish = num * 10 
-		puts "I hope to catch #{fish} fishes today."
-	end
+cats = []
+for i in 1..50
+	cats << Kitty.new
 end
-
-rocky = Kitten.new
-rocky.play("yarn")
-rocky.catch(50)
-
-
-storage = []
-
-i = 0
-
-while i <= 50
-	storage << Kitten.new
-	i += 1
-end
-
-p storage
-
-storage.each do |item|
-	rocky.play("ball")
-	rocky.catch(100)
-end
+cats.each {|kitty|
+	kitty.meow(1)
+	kitty.scratch}
