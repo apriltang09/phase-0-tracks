@@ -1,5 +1,4 @@
 class Puppy
-
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -20,6 +19,7 @@ class Puppy
   	puts "Initializing new puppy instance ..."
   end
 end
+
 ball = "ball"
 fido = Puppy.new
 fido.fetch(ball)
@@ -39,10 +39,13 @@ class Kitty
 		puts "You have been scratched"
 	end
 end
+
 cats = []
+
 for i in 1..50
 	cats << Kitty.new
 end
+
 cats.each {|kitty|
 	kitty.meow(1)
 	kitty.scratch}
