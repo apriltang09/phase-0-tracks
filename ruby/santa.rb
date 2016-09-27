@@ -1,83 +1,77 @@
 class Santa
-
-	attr_accessor :gender, :ethnicity
-
+	
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+	
 	def initialize(gender, ethnicity)
-		p "Initializing Santa instance..."
+		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
 	
-	def speak(string)
-		p string
-	end
-	
-	def eat_milk_and_cookies(type)
-		p "That was a good #{type}"
-	end
-	
-	def celebrate_birthday(age)
-		age + 1
+	def celebrate_birthday
+		@age = @age + 1
 	end
 	
 	def get_mad_at(name)
-		i = 0
-		while i < @reindeer_ranking.length
-			if @reindeer_ranking[i] == name
-				@reindeer_ranking.delete(name)
-				@reindeer_ranking.push(name)
-			end
-		i += 1
-		end
-		p @reindeer_ranking
+		@reindeer_ranking.delete(name)
+		@reindeer_ranking.push(name)
 	end
 	
-	def info(gender, ethnicity)
-		p "Person One: #{@gender} and #{@ethnicity}"
-		p "Person Two: #{gender} and #{ethnicity}!"
+	# def gender=(new_gender)
+	# 	@gender=new_gender
+	# end
+	
+	# def age
+	# 	@age
+	# end
+	
+	# def ethnicity
+	# 	@ethnicity
+	# end
+	
+	def speak
+		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
+	
+	def eat_milk_and_cookies(type_of_cookie, helper)
+		puts "That was a good #{type_of_cookie}!" 
+		puts "Thank you #{helper} for helping!"
+		puts
+	end
+	
 end
 
-christmas = Santa.new("MaLe", "Mexican")
-christmas.speak("Ho, ho, ho! Haaaappy holidays!")
-christmas.eat_milk_and_cookies("snickerdoodle")
-christmas.info("MALE", "FRENCH")
-christmas.get_mad_at("Vixen")
+# create 100 santas with random genders and random ethnicities
+# santas = []
 
-christmas.gender= "FeMALE"  
-puts "I am #{christmas.gender}"
-christmas.ethnicity= "Italian"
-puts "My ethnicity is: #{christmas.ethnicity}."
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-##RELEASE 4
+# 100.times do
+# 	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+# end
 
-class Santa	
-	def gender
-		gender = ["agender", "female","bigender", "male", "female", "gender fluid", "N/A"]
-		p gender.sample
-	end
-	
-	def ethnicity
-		ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-		ethnicity = ethnicity.sample
-		p ethnicity
-	end
-	
-	def age
-		old = rand(1..140)
-		p old
-	end
-	
-	i = 0 
+# santas
 
+# code to test for updates
+# one_santa = Santa.new("female", "asian")
+# one_santa.celebrate_birthday
+# one_santa
+# one_santa.get_mad_at("Vixen")
+# one_santa
+# one_santa.gender = "male"
+# one_santa
 
-while i <= 100
-	claus = Santa.new
-	claus.gender
-	claus.ethnicity
-	claus.age
-	i += 1
-end 
-end
+#diverse initializations
+# santas = []
+
+# santas << Santa.new("female", "asian")
+# santas << Santa.new("male", "italian")
+# santas << Santa.new("female", "black")
+# santas << Santa.new("male", "greek")
+# santas << Santa.new("female", "latino")
+# santas << Santa.new("male", "spanish")
+# santas << Santa.new("female", "french")
