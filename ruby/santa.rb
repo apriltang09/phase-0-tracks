@@ -44,21 +44,34 @@ class Santa
 	
 end
 
+# create 100 santas with random genders and random ethnicities
+# santas = []
+
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+# 100.times do
+# 	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+# end
+
+# santas
+
+# code to test for updates
 # one_santa = Santa.new("female", "asian")
 # one_santa.celebrate_birthday
+# one_santa
 # one_santa.get_mad_at("Vixen")
+# one_santa
 # one_santa.gender = "male"
 # one_santa
 
-# one_santa.age
-# one_santa.ethnicity
+#diverse initializations
+# santas = []
 
-santas = []
-
-santas << Santa.new("female", "asian")
-santas << Santa.new("male", "italian")
-santas << Santa.new("female", "black")
-santas << Santa.new("male", "greek")
-santas << Santa.new("female", "latino")
-santas << Santa.new("male", "spanish")
-santas << Santa.new("female", "french")
+# santas << Santa.new("female", "asian")
+# santas << Santa.new("male", "italian")
+# santas << Santa.new("female", "black")
+# santas << Santa.new("male", "greek")
+# santas << Santa.new("female", "latino")
+# santas << Santa.new("male", "spanish")
+# santas << Santa.new("female", "french")
