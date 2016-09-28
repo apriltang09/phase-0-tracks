@@ -49,12 +49,12 @@ add_or_update(grocery_list, "pizza", 5)
 #steps: using the list, delete the item that is passed in
 #output: return list with deleted item
 
-def remove(list, item)
-	list.delete(item)
-	list
-end
+# def remove(list, item)
+# 	list.delete(item)
+# 	list
+# end
 
-remove(grocery_list, "beans")
+# remove(grocery_list, "beans")
 
 # Method to update the quantity of an item
 
