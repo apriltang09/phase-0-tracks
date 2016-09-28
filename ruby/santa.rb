@@ -36,9 +36,8 @@ class Santa
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
 	
-	def eat_milk_and_cookies(type_of_cookie, helper)
+	def eat_milk_and_cookies(type_of_cookie)
 		puts "That was a good #{type_of_cookie}!" 
-		puts "Thank you #{helper} for helping!"
 		puts
 	end
 	
