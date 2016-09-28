@@ -12,7 +12,7 @@ class Santa
 	end
 	
 	def celebrate_birthday
-		@age = @age + 1
+		@age = rand(0..140)
 	end
 	
 	def get_mad_at(name)
@@ -44,19 +44,24 @@ class Santa
 	
 end
 
-# create 100 santas with random genders and random ethnicities
-# santas = []
+santas = []
 
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-# 100.times do
-# 	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
-# end
+puts "How many Santas would you like?"
+answer = gets.to_i
 
-# santas
+answer.times do
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
 
-# code to test for updates
+santas.each do |santa|
+	puts
+	puts "Santa is #{santa.gender} gender and #{santa.ethnicity} ethnicity. Santa is #{santa.celebrate_birthday} year old."
+	puts
+end
+
 # one_santa = Santa.new("female", "asian")
 # one_santa.celebrate_birthday
 # one_santa
@@ -65,7 +70,9 @@ end
 # one_santa.gender = "male"
 # one_santa
 
-#diverse initializations
+# one_santa.age
+# one_santa.ethnicity
+
 # santas = []
 
 # santas << Santa.new("female", "asian")
