@@ -62,6 +62,7 @@ santas.each do |santa|
 	puts
 end
 
+# Release 2: Testing getter and setter methods
 # one_santa = Santa.new("female", "asian")
 # one_santa.celebrate_birthday
 # one_santa
@@ -69,9 +70,10 @@ end
 # one_santa
 # one_santa.gender = "male"
 # one_santa
-
 # one_santa.age
 # one_santa.ethnicity
+
+# Release 1: Diverse Initialization 
 
 # santas = []
 
