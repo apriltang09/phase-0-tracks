@@ -46,3 +46,17 @@ class Game
 		end
 	end
 end
+
+puts "Please put a word for guessing"
+word = gets.chomp
+
+game = Game.new(word)
+game.first_guess
+
+while game.guess_count > 0
+	puts "Please guess a letter"
+	letter = gets.chomp
+	game.guess_right(letter)
+end
+
+game.message
