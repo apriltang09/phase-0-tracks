@@ -31,7 +31,7 @@ class Game
 			@array[i] = @secret_word[i]
 				 	p @array.join(' ')
 					@guess_count = @guess_count - 1
-		end
+			end
 		@array
 		i+= 1
 		end
