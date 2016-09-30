@@ -45,16 +45,16 @@ class Game
 	end
 end
 
-puts "Please put a word for guessing"
-word = gets.chomp
+# puts "Please put a word for guessing"
+# word = gets.chomp
 
-game = Game.new(word)
-game.blanks
+# game = Game.new(word)
+# game.blanks
 
-while game.guess_count > 0
-	puts "Please guess a letter"
-	letter = gets.chomp
-	game.guess_right(letter)
-end
+# while game.guess_count > 0
+# 	puts "Please guess a letter"
+# 	letter = gets.chomp
+# 	game.guess_right(letter)
+# end
 
-game.message
+# game.message
