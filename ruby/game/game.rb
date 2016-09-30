@@ -5,10 +5,9 @@ class Game
 	def initialize(secret_word)
 		@secret_word = secret_word
 		@guess_count = @secret_word.length
-		@array = []
 	end
 	
-	def first_guess
+	def blanks
 		@array = Array.new(@secret_word.length, '_')
 		p @array.join(' ')
 	end
@@ -18,7 +17,6 @@ class Game
 		if !@secret_word.include? guess
 			p @array.join(' ')
 			@guess_count = @guess_count - 1
-			return 
 		end
 
 		i = 0
@@ -51,7 +49,7 @@ puts "Please put a word for guessing"
 word = gets.chomp
 
 game = Game.new(word)
-game.first_guess
+game.blanks
 
 while game.guess_count > 0
 	puts "Please guess a letter"
