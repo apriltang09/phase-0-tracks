@@ -50,5 +50,4 @@ describe Game do
 		game.guessing_letter("t")
 		expect(game.message).to eq "Nope, better luck next time!"
 	end
-
 end
