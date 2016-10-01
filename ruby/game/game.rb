@@ -1,18 +1,14 @@
 class Game
 	
-	attr_reader :guess_count
+	attr_reader :guess_count 
 	
 	def initialize(secret_word)
 		@secret_word = secret_word
 		@guess_count = @secret_word.length
+		@fill_in = Array.new(@secret_word.length, '_')
 	end
 	
-	def blanks
-		@array = Array.new(@secret_word.length, '_')
-		p @array.join(' ')
-	end
-	
-	def guess_right(guess)
+	def guessing_letter(guess)
 
 		if !@secret_word.include? guess
 			p @array.join(' ')
@@ -21,40 +17,39 @@ class Game
 
 		i = 0
 		while i < @secret_word.length
-			if guess == @array[i]
+			if guess == @fill_in[i]
 				p "You already guessed that!"
-				p @array.join(' ')
+				p @fill_in.join(' ')
 				@guess_count
 			elsif guess == @secret_word[i]
-			@array[i] = @secret_word[i]
-				 	p @array.join(' ')
+			@fill_in[i] = @secret_word[i]
+				 	p @fill_in.join(' ')
 					@guess_count = @guess_count - 1
 			end
-		@array
+		@fill_in
 		i+= 1
 		end
 	end
 	
 	def message
-		@array = @array.join
-		if @array == @secret_word
+		@fill_in = @fill_in.join
+		if @fill_in == @secret_word
 			p "Winner!"
-		elsif @array != @secret_word
-			p "Nope!"
+		elsif @fill_in != @secret_word
+			p "Nope, better luck next time!"
 		end
 	end
 end
 
-# puts "Please put a word for guessing"
-# word = gets.chomp
+puts "Please put a word for guessing"
+word = gets.chomp
 
-# game = Game.new(word)
-# game.blanks
+game = Game.new(word)
 
-# while game.guess_count > 0
-# 	puts "Please guess a letter"
-# 	letter = gets.chomp
-# 	game.guess_right(letter)
-# end
+while game.guess_count > 0
+	puts "Please guess a letter"
+	letter = gets.chomp
+	game.guessing_letter(letter)
+end
 
-# game.message
+game.message
