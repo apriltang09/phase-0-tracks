@@ -1,6 +1,6 @@
 class Game
 	
-	attr_reader :guess_count 
+	attr_reader :guess_count, :fill_in
 	
 	def initialize(secret_word)
 		@secret_word = secret_word
@@ -11,7 +11,7 @@ class Game
 	def guessing_letter(guess)
 
 		if !@secret_word.include? guess
-			p @array.join(' ')
+			p @fill_in.join(' ')
 			@guess_count = @guess_count - 1
 		end
 
@@ -41,15 +41,21 @@ class Game
 	end
 end
 
-puts "Please put a word for guessing"
-word = gets.chomp
+# puts "Please put a word for guessing"
+# word = gets.chomp
 
-game = Game.new(word)
+# game = Game.new(word)
 
-while game.guess_count > 0
-	puts "Please guess a letter"
-	letter = gets.chomp
-	game.guessing_letter(letter)
-end
+# while game.guess_count > 0
+# 	puts "Please guess a letter"
+# 	letter = gets.chomp
+# 	game.guessing_letter(letter)
+# end
 
-game.message
+# if @fill_in
+# 	puts "Your final guess: #{game.fill_in.join('')}"
+# 	game.message
+# else
+# 	puts "Your final guess: #{game.fill_in.join(' ')}"
+# 	game.message
+# end
