@@ -1,62 +1,55 @@
-#PSEUDOCODE
-#Person 1 prompt to enters secret word
-#store in initialization: SECRET PASSWORD
-
-#have an ARRAY with _ that match secret_word.length
-#this has to be modifiable in other places
-
-#Person 2 guess a letter
-#GUESS: store their letter
-
-#loop through secret_word to 
-#see if secret_word[i] == guess
-
-#if secret_word[i] == guess,
-#go through ARRAY index _[i] and interchange the 
-#letter at the same index as secret_word[i]
-
-#put congrats if win
-#put taunt if lose
-
-class Game 
-
-	attr_reader :secret_word, :array
+class Game
+	
+	attr_reader :secret_word, :guess_count, :fill_in
 	
 	def initialize(secret_word)
 		@secret_word = secret_word
-		@array = Array.new(@secret_word.length, "_")
+		@guess_count = @secret_word.length
+		@fill_in = Array.new(@secret_word.length, '_')
 	end
 	
-	def find_letter(any_word)
+	def guessing_letter(guess)
+
+		if !@secret_word.include? guess
+			p @fill_in.join(' ')
+			@guess_count = @guess_count - 1
+		end
+
 		i = 0
 		while i < @secret_word.length
-			if @secret_word[i] == any_word
-				@array[i] = @secret_word[i]
-				p @array
+			if guess == @fill_in[i]
+				p "You already guessed that!"
+				p @fill_in.join(' ')
+				# @guess_count
+			elsif guess == @secret_word[i]
+			@fill_in[i] = @secret_word[i]
+				 	p @fill_in.join(' ')
+					@guess_count = @guess_count - 1
 			end
-		i += 1
+		@fill_in
+		i+= 1
 		end
 	end
-
+	
 	def message
-		if @array.join("") == @secret_word
-			p "Congrats! You win!"
-		else
-			p "Better luck next time!"
+		@fill_in = @fill_in.join
+		if @fill_in == @secret_word
+			p "Winner!"
+		elsif @fill_in != @secret_word
+			p "Nope, better luck next time!"
 		end
 	end
 end
 
-# puts "Enter a secret word: "
-# secret_word = gets.chomp
-# new_game = Game.new(secret_word)
+puts "Please put a word for guessing"
+word = gets.chomp
 
-# i = 0
-# while i < secret_word.length
-# 	puts "Guess a letter: "
-# 	guess = gets.chomp
-# 	new_game.find_letter(guess)
-# 	i += 1
-# end
+game = Game.new(word)
 
-# new_game.message
+while game.guess_count > 0
+	puts "Please guess a letter"
+	letter = gets.chomp
+	game.guessing_letter(letter)
+end
+
+game.message

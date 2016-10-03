@@ -1,40 +1,53 @@
-require_relative 'game' 
+require_relative 'game'
 
-describe Game do
-	let (:new_game) {Game.new("hello")}
+describe Game do 
+	let(:game) {Game.new("hola")}
 
-	it "stores the secret word upon initialization" do
-		expect(new_game.secret_word).to eq "hello"
+	it "stores the secret word upon initalization" do
+		expect(game.secret_word).to eq "hola"
+	end
+
+	it "stores the guess count upon initialization" do
+		expect(game.guess_count).to eq 4
 	end
 
 	it "stores an array the length of secret word upon initialization" do
-		expect(new_game.array).to eq ["_", "_", "_", "_", "_"]
+		expect(game.fill_in).to eq ["_", "_", "_", "_"]
 	end
 
-	it "when letter in secret word is same as guess" do
-		new_game.find_letter("h")
-		expect(new_game.array).to eq ["h", "_", "_", "_", "_"]
+	it "gives blanks when the letter is not the same as guess" do
+		game.guessing_letter("b")
+		expect(game.fill_in.join(' ')).to eq "_ _ _ _"
 	end
 
-	it "when letter in secret word is not the same as guess" do
-		new_game.find_letter("x")
-		expect(new_game.array).to eq ["_", "_", "_", "_", "_"]
+	it "when a wrong letter has already been used" do
+		game.guessing_letter("b")
+		expect(game.fill_in.join(' ')).to eq "_ _ _ _"
 	end
 
-	it "prints out a message for win" do
-		new_game.find_letter("h")
-		new_game.find_letter("e")
-		new_game.find_letter("l")
-		new_game.find_letter("o")
-		expect(new_game.message).to eq "Congrats! You win!"
+	it "when the letter is the same as guess" do
+		game.guessing_letter("h")
+		expect(game.fill_in.join(' ')).to eq "h _ _ _"
+	end
+
+	it "when the right letter has already been used" do
+		game.guessing_letter("h")
+		expect(game.fill_in.join(' ')).to eq "h _ _ _"
+	end
+
+	it "prints out the message for win" do
+		game.guessing_letter("h")
+		game.guessing_letter("o")
+		game.guessing_letter("l")
+		game.guessing_letter("a")
+		expect(game.message).to eq "Winner!"
 	end
 
 	it "prints out a message for loss" do
-		new_game.find_letter("b")
-		new_game.find_letter("e")
-		new_game.find_letter("v")
-		new_game.find_letter("l")
-		new_game.find_letter("b")
-		expect(new_game.message).to eq "Better luck next time!"
+		game.guessing_letter("b")
+		game.guessing_letter("o")
+		game.guessing_letter("a")
+		game.guessing_letter("t")
+		expect(game.message).to eq "Nope, better luck next time!"
 	end
 end
