@@ -4,7 +4,7 @@ describe Game do
 	let(:game) {Game.new("hola")}
 
 	it "stores the secret word upon initalization" do
-		expect secret_word = "hola"
+		expect(game.secret_word).to eq "hola"
 	end
 
 	it "stores the guess count upon initialization" do
