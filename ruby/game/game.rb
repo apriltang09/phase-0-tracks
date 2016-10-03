@@ -16,7 +16,7 @@
 
 #once guess_count is zero, provide message
 #if array is the same as secret word, print win statement
-#if array is the same as secret word, print lost statement
+#if array is not the same as secret word, print lost statement
 
 class Game
 	
