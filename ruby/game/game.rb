@@ -1,3 +1,23 @@
+#PSEUDOCODE
+
+#have user give a secret word, store the secret word
+#set up guess count to keep track of how much guesses user has
+#set up empty, blank array at the length of the secret word
+
+#filter through the letter that the user is guessing
+#if letter is not in secret word, provide array for reference, decrease guess count by one
+
+#if letter has already been used, print out a statement letting user know, 
+#provide array for reference
+
+#if the letter is in secret word, put letter in the blank array at the
+#same place that secret word has that letter, provide array for reference,
+#decrease guess count by one
+
+#once guess_count is zero, provide message
+#if array is the same as secret word, print win statement
+#if array is the same as secret word, print lost statement
+
 class Game
 	
 	attr_reader :secret_word, :guess_count, :fill_in
