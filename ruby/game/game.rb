@@ -20,7 +20,7 @@ class Game
 			if guess == @fill_in[i]
 				p "You already guessed that!"
 				p @fill_in.join(' ')
-				@guess_count
+				# @guess_count
 			elsif guess == @secret_word[i]
 			@fill_in[i] = @secret_word[i]
 				 	p @fill_in.join(' ')
@@ -41,21 +41,15 @@ class Game
 	end
 end
 
-# puts "Please put a word for guessing"
-# word = gets.chomp
+puts "Please put a word for guessing"
+word = gets.chomp
 
-# game = Game.new(word)
+game = Game.new(word)
 
-# while game.guess_count > 0
-# 	puts "Please guess a letter"
-# 	letter = gets.chomp
-# 	game.guessing_letter(letter)
-# end
+while game.guess_count > 0
+	puts "Please guess a letter"
+	letter = gets.chomp
+	game.guessing_letter(letter)
+end
 
-# if @fill_in
-# 	puts "Your final guess: #{game.fill_in.join('')}"
-# 	game.message
-# else
-# 	puts "Your final guess: #{game.fill_in.join(' ')}"
-# 	game.message
-# end
+game.message
