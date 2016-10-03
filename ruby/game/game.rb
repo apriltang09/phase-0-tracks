@@ -11,7 +11,8 @@
 #provide array for reference
 
 #if the letter is in secret word, put letter in the blank array at the
-#same place that secret word has that letter, decrease guess count by one
+#same place that secret word has that letter, provide array for reference,
+#decrease guess count by one
 
 #once the guess_count is zero, provide message
 #if array is the same as secret word, print win statement
