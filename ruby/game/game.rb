@@ -4,7 +4,7 @@
 #set up guess count to keep track of how much guesses user has
 #set up empty, blank array at the length of the secret word
 
-#have a method that filters through the letter that the user is guessing
+#filter through the letter that the user is guessing
 #if letter is not in secret word, provide array for reference, decrease guess count by one
 
 #if letter has already been used, print out a statement letting user know, 
@@ -14,7 +14,7 @@
 #same place that secret word has that letter, provide array for reference,
 #decrease guess count by one
 
-#once the guess_count is zero, provide message
+#once guess_count is zero, provide message
 #if array is the same as secret word, print win statement
 #if array is the same as secret word, print lost statement
 
