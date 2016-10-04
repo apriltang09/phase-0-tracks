@@ -1,37 +1,32 @@
-var colors = ["red", "orange", "yellow", "green"];
-
-var names = ["Ed", "April", "Jenna", "Chad"];
-
-colors.push("blue");
-console.log(colors);
-
-names.push("Jason");
-console.log(names);
-
 var horses = {}
+var	i
+	colors = ["blue", "red", "pink", "purple"]
+	names = ["Ed", "Howard", "Bob", "Janet"]
+	colors.push("green")
+	names.push("Martha")
 
-for (var i = 0; i < names.length; i++){
-	horses[names[i]] = colors[i];
+for (i = 0; i < names.length; i++) {
+   	horses[names[i]] = colors[i];
 }
 
-console.log(horses);
+console.log (horses)
 
-function Car(color, isManuel, year){
-
-	console.log("Our new car:", this);
-	this.color = color;
-	this.isManuel = isManuel;
+function Car(year, color, isAutomatic){
+	
+	console.log ("Car types:", this);
 	this.year = year;
+	this.color = color;
+	this.isAutomatic = isAutomatic;
+	this.sound = function() { console.log ("Vroom!"); };
 
-	this.honk = function(){console.log("Honk!");};
-
-	console.log("CAR INITIALIZATION COMPLETE");
 }
 
-var usedCar = new Car("green", true, 1999);
-console.log(usedCar);
-usedCar.honk();
+var firstCar = new Car(2016, "red", true)
+console.log(firstCar);
+console.log("*car starts*")
+firstCar.sound();
 
-var newCar = new Car("white", false, 2016);
-console.log(newCar);
-newCar.honk();
+var secondCar = new Car(1999, "blue", false)
+console.log(secondCar);
+console.log("*car starts*")
+secondCar.sound();
