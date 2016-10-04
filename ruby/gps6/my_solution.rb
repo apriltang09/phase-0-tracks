@@ -5,18 +5,21 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# require relative: implement this related filed, has to be in the same folder
+# require: load ruby modules in additions to methods
 #
 require_relative 'state_data'
 
 class VirusPredictor
 
+#defines instance variables when we initiate a new instance of the class
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+#calling predicted_deaths method and speed_of_spread method
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -24,6 +27,8 @@ class VirusPredictor
 
   private
 
+#method that takes in instance variables and using the population value to 
+#find the number of deaths and printing a statement 
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -42,6 +47,8 @@ class VirusPredictor
 
   end
 
+#method that takes in instance variables and using the population density to
+#determine the speed that a disease would spread and prints a statment 
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
