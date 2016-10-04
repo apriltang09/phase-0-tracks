@@ -124,7 +124,7 @@ end
 
 # What concept did you most solidify in this challenge?
 # There are different ways to write hashes and you can use a mixture of it to write
-# more readable code. Also, you can chain methods. 
+# more readable code.
 
 
 
