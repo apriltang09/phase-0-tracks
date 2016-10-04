@@ -1,15 +1,14 @@
 
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Justin Steensma].
+# We spent [about 1] hour on this challenge.
 
 # EXPLANATION OF require_relative
 # require relative: implement this related filed, has to be in the same folder
 # require: load ruby modules in additions to methods
-#
+# require 'pry'
 
-require 'pry'
 require_relative 'state_data'
 
 class VirusPredictor
@@ -100,3 +99,36 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# To use the rocket symbol, you will need to have a string as a key.
+# To retrieve the value, the syntax is hash_name['key']. 
+# To add a new value, the syntax is the same, hash_name['key']. 
+
+# To use the colon syntax, you do not need a string as a key. 
+# To retrieve the value, the syntax is hash_name[:key].
+# To add a new value, the syntax is the same, hash_name[:key].
+
+# What does require_relative do? How is it different from require?
+# Require_relative uploads the information from another file in the same folder.
+# Require mean the file does not need to be in the same folder to upload but will need a path
+# to get to the file you want to upload. 
+
+# What are some ways to iterate through a hash?
+# You can use different methods like .each ,.each_pair.
+# To get all the keys or all the values only, use .each_key and .each_value respectively. 
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# Since instance variables are available throughout the class, we can eliminate the  
+# parameters here because it only contains instance variables. 
+
+# What concept did you most solidify in this challenge?
+# There are different ways to write hashes and you can use a mixture of it to write
+# more readable code. Also, you can chain methods. 
+
+
+
+
+
+
+
