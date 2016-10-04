@@ -8,6 +8,8 @@
 # require relative: implement this related filed, has to be in the same folder
 # require: load ruby modules in additions to methods
 #
+
+require 'pry'
 require_relative 'state_data'
 
 class VirusPredictor
@@ -89,6 +91,12 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
+
+
+
+STATE_DATA.each do |state, value|
+	VirusPredictor.new(state, value[:population_density], value[:population]).virus_effects
+end
 
 
 #=======================================================================
