@@ -20,3 +20,13 @@ function Car(year, color, isAutomatic){
 	this.sound = function() { console.log ("Vroom!"); };
 
 }
+
+var firstCar = new Car(2016, "red", true)
+console.log(firstCar);
+console.log("*car starts*")
+firstCar.sound();
+
+var secondCar = new Car(1999, "blue", false)
+console.log(secondCar);
+console.log("*car starts*")
+secondCar.sound();
