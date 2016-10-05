@@ -18,3 +18,12 @@ function algos(array){
 }
 
 algos(["long phrase","longest phrase","longer phrase"]);
+
+// Release 1
+// have function that take two parameters
+//take the first object key and separate what the key is and what the value is
+//take the second object key and separate what the key is and what the value is
+
+// compare first object key with second object key
+//compare the first object value with the second object value
+// if both statements are true, return true else return false
