@@ -17,7 +17,7 @@ function algos(array){
 	return word;
 }
 
-algos(["long phrase","longest phrase","longer phrase"]);
+// algos(["long phrase","longest phrase","longer phrase"]);
 
 // Release 1
 // have function that take two parameters
@@ -56,8 +56,8 @@ function match(object1, object2){
 		}
 }
 
-match({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //true
-match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
+// match({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //true
+// match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
 
 //Release 2
 // have function that takes in a number, which is how much words will be in that array
@@ -87,3 +87,8 @@ for(var j = 0; j < 10; j++){
 	console.log(generate);
 	algos(generate);
 }
+
+//Driver Code
+algos(["long phrase","longest phrase","longer phrase"]); //'longest phrase'
+match({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //true
+match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
