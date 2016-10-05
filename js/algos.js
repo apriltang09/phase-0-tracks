@@ -27,3 +27,34 @@ algos(["long phrase","longest phrase","longer phrase"]);
 // compare first object key with second object key
 //compare the first object value with the second object value
 // if both statements are true, return true else return false
+
+function match(object1, object2){
+
+	var one = object1;
+	var two = object2;
+	
+	var first_keys;
+	var first_values;
+	
+	var second_keys;
+	var second_values;
+	
+	for(var key in one){
+		first_keys = key;
+		first_values = one[key];
+	}
+	
+	for(key in two){
+		second_keys = key;
+		second_values = two[key];
+	}
+
+	if(first_values == second_values && first_keys == second_keys){
+			return true;
+		} else {
+			return false;
+		}
+}
+
+match({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //true
+match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
