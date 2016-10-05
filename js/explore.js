@@ -13,4 +13,9 @@ function reverse(string){
 }
 
 var greeting = reverse("hello");
-console.log(greeting)
+
+
+if (2 != 3){
+	console.log(greeting)
+}
+
