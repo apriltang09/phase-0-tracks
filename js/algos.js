@@ -58,3 +58,12 @@ function match(object1, object2){
 
 match({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //true
 match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
+
+//Release 2
+// have function that takes in a number, which is how much words will be in that array
+// make a loop that will generate that amount of words
+//have a string of letters to pick from 
+// loop through the letters and randomly make words that is 
+//up to 10 letters in length and randomly picked from that entire string of letters
+// have an empty array at beginning and push word into empty array
+// print array to see array results
