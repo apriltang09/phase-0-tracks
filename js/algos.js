@@ -80,3 +80,10 @@ array.push(word);
 }
 console.log(array);
 }
+
+//generate the array ten times by looping
+for(var j = 0; j < 10; j++){
+	var generate = randomWord(3);
+	console.log(generate);
+	algos(generate);
+}
