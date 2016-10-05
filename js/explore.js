@@ -16,6 +16,6 @@ var greeting = reverse("hello");
 
 
 if (2 != 3){
-	console.log(greeting)
+	console.log(greeting);
 }
 
