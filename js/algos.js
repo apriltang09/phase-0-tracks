@@ -67,3 +67,16 @@ match({name: "Steven", age: 5}, {name: "Tamir", age: 54}); //false
 //up to 10 letters in length and randomly picked from that entire string of letters
 // have an empty array at beginning and push word into empty array
 // print array to see array results
+
+function randomWord(num){
+	var array = [];
+	for (var n = 0; n < num; n++){
+		var word = "";
+		var letters = 'abcdefghijklmnopqrstuvwxyz';
+		for(var i = 0; i < Math.random()*11; i++){
+			word += letters.charAt(Math.floor(Math.random()*letters.length));
+ }
+array.push(word);
+}
+console.log(array);
+}
