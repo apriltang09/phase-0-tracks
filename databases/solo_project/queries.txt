@@ -1,0 +1,45 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM tvshow;
+
+1|This is Us
+2|Superstore
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE actors SET age=39 WHERE actor="Sterling Brown";
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM actors, tvshow WHERE actors.tvshow_id = tvshow.id;
+
+1|Milo Ventimiglia|39|false|1|1|This is Us
+2|Mandy Moore|32|true|1|1|This is Us
+3|Lauren Ash|33|true|2|2|Superstore
+4|Sterling Brown|39|false|1|1|This is Us
+5|Ben Feldman|36|false|2|2|Superstore
+6|Chrissy Metz|36|true|1|1|This is Us
+7|America Ferrera|32|true|2|2|Superstore
+8|Justin Hartley|39|false|1|1|This is Us
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT actors.actor, actors.age, tvshow.show_name FROM actors JOIN tvshow ON actors.tvshow_id = tvshow.id;
+
+Milo Ventimiglia|39|This is Us
+Mandy Moore|32|This is Us
+Lauren Ash|33|Superstore
+Sterling Brown|39|This is Us
+Ben Feldman|36|Superstore
+Chrissy Metz|36|This is Us
+America Ferrera|32|Superstore
+Justin Hartley|39|This is Us
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM actors WHERE actor="Justin Hartley" AND age=39;
+
+
+
+
+
