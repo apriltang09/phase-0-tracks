@@ -39,7 +39,33 @@ Justin Hartley|39|This is Us
 
 sqlite> DELETE FROM actors WHERE actor="Justin Hartley" AND age=39;
 
+Release 3
 
+Try a few different joins in your database, and record the commands and the output in queries.txt.
 
+a) INNER JOIN (same as JOIN) - selects rows from both tables when columns match 
+   Here, we select every row where tvshow_id from actors table match id from tvshow table
 
+sqlite> SELECT * FROM actors INNER JOIN tvshow ON actors.tvshow_id = tvshow.id;
+
+1|Milo Ventimiglia|39|false|1|1|This is Us
+2|Mandy Moore|32|true|1|1|This is Us
+3|Lauren Ash|33|true|2|2|Superstore
+4|Sterling Brown|39|false|1|1|This is Us
+5|Ben Feldman|36|false|2|2|Superstore
+6|Chrissy Metz|36|true|1|1|This is Us
+7|America Ferrera|32|true|2|2|Superstore
+
+b) LEFT JOIN - selects all of first table and if there are any matches from second table,      provide that also. 
+   Here, the tvshow_id from actors table all match the id from the tvshow table
+
+SELECT * FROM actors LEFT JOIN tvshow ON actors.tvshow_id = tvshow.id;
+
+1|Milo Ventimiglia|39|false|1|1|This is Us
+2|Mandy Moore|32|true|1|1|This is Us
+3|Lauren Ash|33|true|2|2|Superstore
+4|Sterling Brown|39|false|1|1|This is Us
+5|Ben Feldman|36|false|2|2|Superstore
+6|Chrissy Metz|36|true|1|1|This is Us
+7|America Ferrera|32|true|2|2|Superstore
 
