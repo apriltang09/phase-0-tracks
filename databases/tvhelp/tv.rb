@@ -1,7 +1,9 @@
 require 'sqlite3'
 
+#create a database
 db = SQLite3::Database.new("tvtracker.db")
 
+#create tables
 create_channels_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS channels(
 	id INTEGER PRIMARY KEY,
@@ -23,6 +25,7 @@ SQL
 db.execute(create_channels_cmd)
 db.execute(create_tvshows_cmd)
 
+#method to add channel
 def add_channel(db, channel)
 	db.execute("INSERT INTO channels (name) VALUES (?)", [channel])
 end
@@ -34,15 +37,18 @@ if channels.empty?
 	add_channel(db, "ABC")
 end
 
+#method to add tv show
 def add_tvshow (db, show, day, time, channel_id)
 	db.execute("INSERT INTO tvshows (show, day, time, channel_id) 
 	VALUES (?, ?, ?, ?)", [show, day, time, channel_id])
 end
 
+#method to delete tv show
 def delete_tvshow(db, show)
 	db.execute("DELETE FROM tvshows WHERE show = ?", [show])
 end
 
+#method to find show for a specific day in user friendly format
 def find_show_for_today(db, day)
 	show_on_today = db.execute("SELECT show, time FROM tvshows WHERE day=?", [day])
 	i = 0
@@ -52,6 +58,7 @@ def find_show_for_today(db, day)
 	end	
 end
 
+#method to view all relevant info in user friendly format
 def view_channels_and_tvshows(db)
 	all_channels_and_show = db.execute("SELECT tvshows.show, tvshows.day, tvshows.time, channels.name FROM tvshows JOIN channels WHERE tvshows.channel_id = channels.id")
 	i = 0
@@ -61,6 +68,54 @@ def view_channels_and_tvshows(db)
 	i += 1
 	end
 end
+
+#DRIVER CODE
+puts "What are you looking to do? (add show, delete show, find show info, or view all shows and channels?"
+decision = gets.chomp
+
+	if decision == "add show"
+
+		puts "How many shows do you want to add?"
+		response = gets.to_i
+
+		while response > 0
+			puts "What is the name of the show?"
+			show = gets.chomp
+
+			puts "What day is #{show} on?"
+			day = gets.chomp
+
+			puts "What time is #{show} on?"
+			time = gets.chomp
+
+			puts "Is #{show} on NBC or ABC?"
+			on = gets.chomp
+
+			if on == "NBC"
+				channel_id = 1
+			elsif on == "ABC"
+				channel_id = 2
+			end
+
+		add_tvshow(db, show, day, time, channel_id)
+		response -= 1
+		end
+
+	elsif decision == "delete show"
+		puts "What show do you want to delete?"
+		delete_show = gets.chomp
+		delete_tvshow(db, delete_show)
+
+	elsif decision == "find show info"
+		puts "What day do you want to search for?"
+		day = gets.chomp
+		find_show_for_today(db, day)
+
+	elsif decision == "view all shows and channels"
+		view_channels_and_tvshows(db)
+	end
+
+
 
 
 
