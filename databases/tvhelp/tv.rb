@@ -19,3 +19,6 @@ create_tvshows_cmd = <<-SQL
 	FOREIGN KEY (channel_id) REFERENCES channels(id)
 	)
 SQL
+
+db.execute(create_channels_cmd)
+db.execute(create_tvshows_cmd)
