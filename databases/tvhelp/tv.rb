@@ -58,6 +58,11 @@ def find_show_for_today(db, day)
 	end	
 end
 
+#method to update tvshow with correct day
+def update_tvshow_day(db, show, day)
+	db.execute("UPDATE tvshows SET day=? WHERE show=?", [day, show])
+end
+
 #method to view all relevant info in user friendly format
 def view_channels_and_tvshows(db)
 	all_channels_and_show = db.execute("SELECT tvshows.show, tvshows.day, tvshows.time, channels.name FROM tvshows JOIN channels WHERE tvshows.channel_id = channels.id")
@@ -70,7 +75,7 @@ def view_channels_and_tvshows(db)
 end
 
 #DRIVER CODE
-puts "What are you looking to do? (add show, delete show, find show info, or view all shows and channels?"
+puts "What are you looking to do? (add show, delete show, update show day, find show info, or view all shows and channels?"
 decision = gets.chomp
 
 	if decision == "add show"
@@ -105,6 +110,13 @@ decision = gets.chomp
 		puts "What show do you want to delete?"
 		delete_show = gets.chomp
 		delete_tvshow(db, delete_show)
+
+	elsif decision == "update show day"
+		puts "What show would you like to update?"
+		show = gets.chomp
+		puts "What is the updated day that #{show} is on?"
+		day = gets.chomp
+		update_tvshow_day(db, show, day)
 
 	elsif decision == "find show info"
 		puts "What day do you want to search for?"
