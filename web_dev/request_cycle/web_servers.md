@@ -18,9 +18,7 @@ Leverage work of other programmers so we can use for command line commands in pl
 
 see [https://opensource.com/business/15/2/how-linux-philosophy-affects-you](https://opensource.com/business/15/2/how-linux-philosophy-affects-you)
 
-
 * Open Source - source code of software that is free and anyone can download, modify and redistribute. Code can evolve because the development community wants to make good software and not just so they can make money.
-
 see [http://docstore.mik.ua/orelly/linux/run/ch01_07.htm](http://docstore.mik.ua/orelly/linux/run/ch01_07.htm)
 
 ##What is a VPS (virtual private server)?
