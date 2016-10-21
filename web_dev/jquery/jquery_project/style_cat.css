@@ -1,0 +1,16 @@
+.red {
+	color: red;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.bolditalic {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.li_color {
+	color: orange;
+}
