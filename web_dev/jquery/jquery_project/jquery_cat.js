@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 	//test to make sure jquery is linked
@@ -30,4 +29,5 @@ $(document).ready(function(){
 	$("#secondh2").hover(function(){
 		$(this).hide();
 	});
+	
 });
