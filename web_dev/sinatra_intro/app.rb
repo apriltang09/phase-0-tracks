@@ -44,3 +44,41 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+#get all students on each campus
+#need to make path longer than id path for some reason
+get '/students/location/:campus' do
+  campus = params[:campus]
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
+end
+
+get '/contact' do
+  "123 Address St., SF, CA 94111"
+end
+
+get'/great_job' do
+  if name = params[:name] 
+    "Good job, #{name}!"  #URL: localhost:9393/great_job?name=April
+  else
+    "Good job!"           #URL: localhost:9393/great_job
+  end
+end
+
+get '/:number_1/add/:number_2' do
+  final = params[:number_1].to_i + params[:number_2].to_i
+  final.to_s
+end
+
+# get'/' do
+#   if name = params[:name]
+#     "Hello, #{name}!"     #URL: localhost:9393/?name=April
+#   else
+#     "Hello you!"          #URL: localhost:9393
+#   end
+# end
+
+
+
+
+
