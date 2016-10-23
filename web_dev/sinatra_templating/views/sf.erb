@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>San Francisco Students</title>
+</head>
+<body>
+	<p> Hello SF Students! </p>
+ 	<% @students.each do |student| %>
+    	<% if student['campus'] == "SF"%>
+      		<li><%= student['name'] %>, <%= student['age'] %></li>
+    	<% end %>
+    <% end %>
+</body>
+</html>

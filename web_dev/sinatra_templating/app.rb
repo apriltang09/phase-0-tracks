@@ -25,3 +25,9 @@ post '/students' do
 end
 
 # add static resources
+
+#select all students that is in SF
+get '/students/sf' do
+	@students = db.execute("SELECT * FROM students")
+	erb :sf
+end
